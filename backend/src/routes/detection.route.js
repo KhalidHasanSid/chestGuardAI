@@ -5,9 +5,9 @@ import upload from "../middlewares/multer.js"
 
 const detectionRouter =Router()
 
-detectionRouter.route("/sendImage/:MR_no").post( auth("student"),upload.single("xrayImage"), detectionController)
+detectionRouter.route("/sendImage/:MR_no").post( auth("admin"),upload.single("xrayImage"), detectionController)
 //detectionRouter.route("/getRecords").post(getRecords)
-detectionRouter.route("/getDetectedResults").get(auth, getDetectedResults)
+detectionRouter.route("/getDetectedResults").get(auth("patient"), getDetectedResults)
 
 
 

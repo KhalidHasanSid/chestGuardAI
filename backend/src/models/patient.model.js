@@ -51,7 +51,7 @@ const pateintSchema =new mongoose.Schema({
     }, 
     role:{
         type:String,
-        default:"student"
+        default:"patient"
     },
     password:{
         type:String,
