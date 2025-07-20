@@ -14,7 +14,7 @@ export default function SendEmail() {
                ` http://localhost:4500/api/v1/chestguarduser/getPatients/${MR_no}`,
                 { withCredentials: true }
             );
-            console.log(response.data.data);
+            console.log("the user :****",response.data.data);
             setInfo(response.data.data);
             setError("");
         } catch (err) {

@@ -61,6 +61,7 @@ import Patient from "../models/patient.model.js";
     })
   
   const getPatient = asyncHandler(async (req,res)=>{
+    console.log("9999999999999999999999999999")
     console.log("i AM HERE")
     const MR_no=req.params.MR_no
     

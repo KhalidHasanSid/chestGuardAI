@@ -9,8 +9,8 @@ const userRouter= Router()
 
 
 userRouter.route("/registerFYP").post(registerController)
-userRouter.route("/getPatients/:MR_no").get(auth,getPatient)
-userRouter.route("/sendemail").post(auth,SendEmail)
+userRouter.route("/getPatients/:MR_no").get(auth("admin"),getPatient)
+userRouter.route("/sendemail").post(auth("admin"),SendEmail)
 
 userRouter.route("/loginFYP").post(loginUserController)  
  
